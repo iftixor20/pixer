@@ -4,33 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize-min.css">
+  <link rel="stylesheet" href="./css/virsual-hiden-min.css">
+  <!-- <link rel="stylesheet" href="./css/stayls-min.css"> -->
   <link rel="stylesheet" href="./css/stayls.css">
   <title>Pixer</title>
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <nav class="top_nav">
+      <nav class="top_nav fixed">
         <a href="https://index.html" class="nav_link">
           <img class="img_logo" src="./img/pixer-logo.svg" width="58" height="20" alt="pixer logo">
         </a>
         <ul class="nav_list">
           <li class="nav_item"><a class="item_link link_active" href="#bosh">Bosh sahifa</a></li>
+          <li class="nav_item">
             <div class="dropdown">
-              <span class="item_link link_active">Xizmatlar</span>
-              <ul class="dropdown-content">
-                <li class="dropdown_p"><a class="dropdown_link" href="#web" >Web Sayt</a></li>
-                <li class="dropdown_p"><a class="dropdown_link" href="#telegram" >Telegram Bot</a></li>
-                <li class="dropdown_p"><a class="dropdown_link" href="#smm">SMM</a></li>
-                <li class="dropdown_p"><a class="dropdown_link" href="#grafik" >Grafik dizayn</a></li>
-                <li class="dropdown_p"><a class="dropdown_link" href="#crm" >CRM tizim</a></li>
-              </ul>
+              <div class="dropbtn">Xizmatlar</div>
+              <div class="dropdown-content">
+              <a class="dropdown_link" href="#" id="web">Vebsayt tuzish</a>
+              <a class="dropdown_link" href="#">Telegram bot</a>
+              <a class="dropdown_link" href="#">SMM</a>
+              <a class="dropdown_link" href="#">Grafik dizyan</a>
+              <a class="dropdown_link" href="#">CRM tizim</a>
+              </div>
             </div>
+          </li>
           <li class="nav_item"><a class="item_link link_active" href="#portfolio">Portfolio</a></li>
           <li class="nav_item"><a class="item_link link_active" href="#jamoa">Jamoa</a></li>
           <li class="nav_item"><a class="item_link link_active" href="#blog">Blog</a></li>
           <li class="nav_item"><a class="item_link link_active" href="#kontaktlar">Kontaktlar</a></li>
-          <li class="nav_item"><a class="item_link active" href="#Tel">+998 90 921 37 11</a></li>
+          <li class="nav_item"><a class="item_link active" href="tel:+998909213711" target="_blank">+998 90 921 37 11</a></li>
         </ul>
       </nav>
     </div>
@@ -96,6 +101,11 @@
             <p class="servisec_p">lorem ipsum</p>
           </li>
         </ul>
+
+        <div class="link">
+          <button class="sevisec_btn" id="blog">Buyurtma berish</button>
+          <a class="servisec-link" href="#" id="xizmatlar">Xizmatlar sahifasiga o'tish</a>
+        </div>
       </div>
     </div>
     <!-- end of xizmatlar -->
@@ -112,7 +122,6 @@
 
         <ul class="working_list">
           <li class="working_item">
-            <img class="working_img" src="./img/step-illlustration.png" width="300" height="278" alt="step illlustration">
             <div class="working_lavel">
               <h3 class="working_h3">Talablarni aniqlab chiqamiz</h3>
               <p class="working_p">
@@ -121,19 +130,120 @@
             </div>
           </li>
 
-          <li class="working_item">
-            <div class="working_lavel">
-              <h3 class="working_h3">Talablarni aniqlab chiqamiz</h3>
+          <li class="working_item_two">
+            <div class="working_two">
+              <h3 class="working_h3">Bir necha yechimlarni taklif qilamiz</h3>
               <p class="working_p">
                 Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis
               </p>
             </div>
-            <img class="working_img" src="./img/step-illlustration.png" width="300" height="278" alt="step illlustration">
+          </li>
+
+          <li class="working_item_there">
+            <div class="working_there">
+              <h3 class="working_h3">Loyiha uchun vaqt belgilaymiz</h3>
+              <p class="working_p">
+                Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis
+              </p>
+            </div>
+          </li>
+
+          <li class="working_item_sri">
+            <div class="working_sri">
+              <h3 class="working_h3">A’lo sifat bilan bajarib topshiramiz</h3>
+              <p class="working_p">
+                Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis
+              </p>
+            </div>
+          </li>
+
+          <li class="working_item_fayf">
+            <div class="working_fayf">
+              <h3 class="working_h3">Qo'lab quvatlab boramiz</h3>
+              <p class="working_p">
+                Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis
+              </p>
+            </div>
           </li>
         </ul>
       </div>
     </section>
     <!-- end of working -->
+
+    <section class="order" id="blog">
+      <div class="container">
+        <div class="order_text">
+          <h2 class="order_h2">
+            Buyurtma berish
+          </h2>
+          <p class="order_p">
+            Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex, eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar
+          </p>
+
+          <div class="order_input">
+            <form action="backend" method="GET">
+              <div>
+                <input class="username" type="text" name="username" placeholder="Ismingiz">
+              </div>
+
+              <div>
+                <input class="telephone" type="tel" name="tel" placeholder="Telefon raqamingiz">
+              </div>
+
+              <div>
+                <select class="option" name="xizmatlar" required>
+                  <option value="">Xizmat turi</option>
+                  <option value="veb">Vebsayt tuzish</option>
+                  <option value="telegram">Telegram bot</option>
+                  <option value="smm">SMM</option>
+                  <option value="Grafik">Grafik dizayn</option>
+                  <option value="crm">CRM tizim</option>
+                </select>
+              </div>
+              <button class="order_btn" type="submit">Buyurtma berish</button>
+            </form>
+          </div>
+       </div>
+      </div>
+    </section>
+    <!-- end of order -->
+    <footer class="footer" id="kontaktlar">
+      <div class="container">
+        <div class="support">
+          <div class="foter_left">
+            <h3 class="foter-h3">
+              Copyright 2020
+            </h3>
+            <p class="foter-p">
+              Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex, eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar tincidunt.
+            </p>
+          </div>
+
+          <div class="foter_center">
+            <h3 class="foter-h3">Sayt sahifalari</h3>
+            <ul class="foter-list">
+              <li class="foter-item"><a href="#" class="foter-link">Bosh sahifa</a></li>
+              <li class="foter-item"><a href="#" class="foter-link">Xizmatlar</a></li>
+              <li class="foter-item"><a href="#" class="foter-link">Portfolio</a></li>
+              <li class="foter-item"><a href="#" class="foter-link">Jamoa</a></li>
+              <li class="foter-item"><a href="#" class="foter-link">Blok</a></li>
+              <li class="foter-item"><a href="#" class="foter-link">Kontaktlar</a></li>
+            </ul>
+          </div>
+
+          <div class="foter-right">
+            <h3 class="foter-h3">Biz internetda</h3>
+            <ul class="foter-list">
+              <li class="foter-item"><a class="foter-link icon" href="https:/telegram.org/" target="_blank">Telegram</a></li>
+              <li class="foter-item"><a class="foter-link facebook" href="https:/Facebook.com/" target="_blank">Facebook</a></li>
+              <li class="foter-item"><a class="foter-link instagram" href="https://www.instagram.com/" target="_blank">Inistagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
   </main>
 </body>
 </html>
+
